@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MonkeAttack – Offizielle Seite</title>
+  <meta name="description" content="MonkeAttack – VR-Spiel für Oculus. Screenshots, Links zu itch.io, Datenschutz und Nutzungsbedingungen." />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root{
+      --bg:#0b0f14; --panel:#111823; --mute:#99a3ad; --text:#e9edf2; --brand:#70f3ac; --brand2:#49b3ff; --danger:#ff5c7a;
+      --radius:18px; --shadow:0 8px 30px rgba(0,0,0,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans","Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji"}
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:10;background:linear-gradient( to bottom, rgba(11,15,20,.95), rgba(11,15,20,.75));backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;letter-spacing:.3px}
+    .logo-badge{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:radial-gradient(120px 80px at 20% 10%, var(--brand), transparent),radial-gradient(120px 80px at 80% 90%, var(--brand2), transparent);box-shadow:var(--shadow)}
+    .actions{display:flex;flex-wrap:wrap;gap:10px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.12);background:#0e141d}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(0,0,0,.35);border-color:rgba(255,255,255,.22)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#0b0f14;border:none}
+
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:36px 0}
+    .card{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .card.pad{padding:24px}
+    h1{font-size:clamp(28px,4.5vw,44px);line-height:1.1;margin:0 0 10px}
+    p.lead{color:var(--mute);margin:0 0 18px;font-size:18px}
+
+    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+    .shot{position:relative;overflow:hidden;border-radius:16px;border:1px solid rgba(255,255,255,.06);background:#0a0f15}
+    .shot img{display:block;width:100%;height:200px;object-fit:cover;filter:contrast(1.02) saturate(1.05)}
+    .shot:hover img{transform:scale(1.02)}
+    .shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:8px 10px;font-size:12px;color:#d9e3ee;background:linear-gradient( to top, rgba(0,0,0,.55), transparent)}
+
+    .footer{margin:40px 0 16px;color:var(--mute);font-size:14px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+    .muted{color:var(--mute)}
+
+    /* Modal */
+    dialog#lightbox{width:min(900px,92vw);border:none;border-radius:16px;box-shadow:var(--shadow);padding:0;background:#0a0f15}
+    dialog::backdrop{background:rgba(0,0,0,.5)}
+    .lightbox-head{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.08)}
+    .lightbox-body{padding:0}
+    .lightbox-body img{max-width:100%;display:block;height:auto}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="logo">
+        <span class="logo-badge" aria-hidden="true">🦍</span>
+        <span>MonkeAttack</span>
+      </div>
+      <nav class="actions" aria-label="Hauptnavigation">
+        <a id="btn-itch" class="btn primary" href="#" target="_blank" rel="noopener">Zum Spiel auf itch.io</a>
+        <a id="btn-privacy" class="btn" href="#" target="_blank" rel="noopener">Datenschutz</a>
+        <a id="btn-terms" class="btn" href="#" target="_blank" rel="noopener">Nutzungs&shy;bedingungen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <article class="card pad">
+        <h1>Willkommen bei <span style="background:linear-gradient(135deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent">MonkeAttack</span></h1>
+        <p class="lead">Ein schnelles VR-Indie-Spiel voller Chaos, Bananen und Bosskämpfe – exklusiv auf Oculus. Hier findest du Screenshots und alle wichtigen Links.</p>
+        <div class="actions">
+          <a id="cta-itch" class="btn primary" href="#" target="_blank" rel="noopener">Jetzt auf Oculus spielen</a>
+          <a id="cta-privacy" class="btn" href="#" target="_blank" rel="noopener">Datenschutz</a>
+          <a id="cta-terms" class="btn" href="#" target="_blank" rel="noopener">Nutzungs&shy;bedingungen</a>
+        </div>
+      </article>
+      <aside class="card pad">
+        <h2 style="margin-top:0">Galerie</h2>
+        <p class="muted" style="margin-top:-6px">Klicke auf ein Bild zum Vergrößern.</p>
+        <div id="gallery" class="gallery" aria-live="polite"></div>
+      </aside>
+    </section>
+
+    <section class="card pad" aria-labelledby="about-title">
+      <h2 id="about-title" style="margin-top:0">Über das Spiel</h2>
+      <p>MonkeAttack ist ein rasantes VR-Action-Arcade-Spiel. Sammle Bananen, weiche Fallen aus und besiege fiese Bosse. Entwickelt mit viel Liebe von unserem kleinen Team.</p>
+      <ul class="muted">
+        <li>Plattform: <strong>Oculus VR</strong></li>
+        <li>Status: Aktiv in Entwicklung</li>
+        <li>Community: Folge uns auf itch.io für Updates</li>
+      </ul>
+    </section>
+
+    <section class="footer">
+      <span>© <span id="year"></span> MonkeAttack</span>
+      <span class="muted">Kontakt: Keine Firmenadresse verfügbar</span>
+    </section>
+  </main>
+
+  <!-- Bild-Modal / Lightbox -->
+  <dialog id="lightbox" aria-label="Bildansicht">
+    <div class="lightbox-head">
+      <span id="lb-caption" class="muted"></span>
+      <button id="lb-close" class="btn" style="margin:6px">Schließen</button>
+    </div>
+    <div class="lightbox-body"><img id="lb-img" alt="" /></div>
+  </dialog>
+
+  <script>
+    const CONFIG = {
+      itchLink: "https://yourname.itch.io/monkeattack", // itch.io-Seite
+      privacyLink: "https://example.com/datenschutz",   // Datenschutzrichtlinie
+      termsLink: "https://example.com/nutzungsbedingungen", // Nutzungsbedingungen
+      images: [
+        "assets/screens/shot1.jpg",
+        "assets/screens/shot2.jpg",
+        "assets/screens/shot3.jpg"
+      ]
+    };
+
+    const links = [
+      ["btn-itch", CONFIG.itchLink],
+      ["btn-privacy", CONFIG.privacyLink],
+      ["btn-terms", CONFIG.termsLink],
+      ["cta-itch", CONFIG.itchLink],
+      ["cta-privacy", CONFIG.privacyLink],
+      ["cta-terms", CONFIG.termsLink],
+    ];
+    links.forEach(([id, href])=>{ const a=document.getElementById(id); if(a&&href){ a.href=href; }});
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const gallery = document.getElementById('gallery');
+    function filenameToAlt(path){
+      try { const base = path.split('/').pop().split('?')[0]; return base.replace(/[-_]/g,' ').replace(/\.[^.]+$/,''); } catch { return 'Screenshot'; }
+    }
+    CONFIG.images.forEach((src, i)=>{
+      const figure = document.createElement('figure');
+      figure.className = 'shot';
+      const img = document.createElement('img');
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      img.src = src;
+      const alt = filenameToAlt(src) || `Screenshot ${i+1}`;
+      img.alt = alt;
+      const cap = document.createElement('figcaption');
+      cap.textContent = alt;
+      figure.appendChild(img);
+      figure.appendChild(cap);
+      figure.addEventListener('click', ()=> openLightbox(src, alt));
+      gallery.appendChild(figure);
+    });
+
+    const dlg = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+    const lbCap = document.getElementById('lb-caption');
+    const lbClose = document.getElementById('lb-close');
+
+    function openLightbox(src, alt){ lbImg.src = src; lbImg.alt = alt; lbCap.textContent = alt; dlg.showModal(); }
+    lbClose.addEventListener('click', ()=> dlg.close());
+    dlg.addEventListener('click', (e)=>{ const r = dlg.getBoundingClientRect(); if(!(e.clientX>r.left&&e.clientX<r.right&&e.clientY>r.top&&e.clientY<r.bottom)) dlg.close(); });
+    window.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && dlg.open) dlg.close(); });
+  </script>
+</body>
+</html>
