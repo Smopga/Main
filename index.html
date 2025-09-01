@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MonkeAttack – Offizielle Seite</title>
-  <meta name="description" content="MonkeAttack – VR-Spiel für Oculus. Screenshots, Links zu itch.io, Datenschutz und Nutzungsbedingungen." />
+  <title>MonkeAttack – Official Page</title>
+  <meta name="description" content="MonkeAttack – VR game for Oculus. Screenshots, itch.io link, Privacy Policy, and Terms of Service." />
   <link rel="icon" href="favicon.ico" />
   <style>
     :root{
@@ -58,10 +58,10 @@
         <span class="logo-badge" aria-hidden="true">🦍</span>
         <span>MonkeAttack</span>
       </div>
-      <nav class="actions" aria-label="Hauptnavigation">
-        <a id="btn-itch" class="btn primary" href="#" target="_blank" rel="noopener">Zum Spiel auf itch.io</a>
-        <a id="btn-privacy" class="btn" href="#" target="_blank" rel="noopener">Datenschutz</a>
-        <a id="btn-terms" class="btn" href="#" target="_blank" rel="noopener">Nutzungs&shy;bedingungen</a>
+      <nav class="actions" aria-label="Main navigation">
+        <a id="btn-itch" class="btn primary" href="https://smopga.itch.io/monkeattack" target="_blank" rel="noopener">Play on itch.io</a>
+        <a id="btn-privacy" class="btn" href="datenschutz.html" target="_blank" rel="noopener">Privacy Policy</a>
+        <a id="btn-terms" class="btn" href="terms.html" target="_blank" rel="noopener">Terms of Service</a>
       </nav>
     </div>
   </header>
@@ -69,67 +69,53 @@
   <main class="wrap">
     <section class="hero">
       <article class="card pad">
-        <h1>Willkommen bei <span style="background:linear-gradient(135deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent">MonkeAttack</span></h1>
-        <p class="lead">Ein schnelles VR-Indie-Spiel voller Chaos, Bananen und Bosskämpfe – exklusiv auf Oculus. Hier findest du Screenshots und alle wichtigen Links.</p>
+        <h1>Welcome to <span style="background:linear-gradient(135deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent">MonkeAttack</span></h1>
+        <p class="lead">A fast-paced VR indie game full of chaos, bananas, and boss fights – exclusively on Oculus. Browse screenshots and access all important links.</p>
         <div class="actions">
-          <a id="cta-itch" class="btn primary" href="#" target="_blank" rel="noopener">Jetzt auf Oculus spielen</a>
-          <a id="cta-privacy" class="btn" href="#" target="_blank" rel="noopener">Datenschutz</a>
-          <a id="cta-terms" class="btn" href="#" target="_blank" rel="noopener">Nutzungs&shy;bedingungen</a>
+          <a id="cta-itch" class="btn primary" href="https://smopga.itch.io/monkeattack" target="_blank" rel="noopener">Play on Oculus</a>
+          <a id="cta-privacy" class="btn" href="datenschutz.html" target="_blank" rel="noopener">Privacy Policy</a>
+          <a id="cta-terms" class="btn" href="terms.html" target="_blank" rel="noopener">Terms of Service</a>
         </div>
       </article>
       <aside class="card pad">
-        <h2 style="margin-top:0">Galerie</h2>
-        <p class="muted" style="margin-top:-6px">Klicke auf ein Bild zum Vergrößern.</p>
+        <h2 style="margin-top:0">Gallery</h2>
+        <p class="muted" style="margin-top:-6px">Click on an image to enlarge.</p>
         <div id="gallery" class="gallery" aria-live="polite"></div>
       </aside>
     </section>
 
     <section class="card pad" aria-labelledby="about-title">
-      <h2 id="about-title" style="margin-top:0">Über das Spiel</h2>
-      <p>MonkeAttack ist ein rasantes VR-Action-Arcade-Spiel. Sammle Bananen, weiche Fallen aus und besiege fiese Bosse. Entwickelt mit viel Liebe von unserem kleinen Team.</p>
+      <h2 id="about-title" style="margin-top:0">About the Game</h2>
+      <p>MonkeAttack is a fast-paced VR action arcade game. Collect bananas, dodge traps, and defeat fierce bosses. Developed with love by our small team.</p>
       <ul class="muted">
-        <li>Plattform: <strong>Oculus VR</strong></li>
-        <li>Status: Aktiv in Entwicklung</li>
-        <li>Community: Folge uns auf itch.io für Updates</li>
+        <li>Platform: <strong>Oculus VR</strong></li>
+        <li>Status: Active development</li>
+        <li>Community: Follow us on itch.io for updates</li>
       </ul>
     </section>
 
     <section class="footer">
       <span>© <span id="year"></span> MonkeAttack</span>
-      <span class="muted">Kontakt: Keine Firmenadresse verfügbar</span>
+      <span class="muted">Contact: No company email available</span>
     </section>
   </main>
 
-  <!-- Bild-Modal / Lightbox -->
-  <dialog id="lightbox" aria-label="Bildansicht">
+  <dialog id="lightbox" aria-label="Image view">
     <div class="lightbox-head">
       <span id="lb-caption" class="muted"></span>
-      <button id="lb-close" class="btn" style="margin:6px">Schließen</button>
+      <button id="lb-close" class="btn" style="margin:6px">Close</button>
     </div>
     <div class="lightbox-body"><img id="lb-img" alt="" /></div>
   </dialog>
 
   <script>
     const CONFIG = {
-      itchLink: "https://smopga.itch.io/monkeattack", // itch.io-Seite
-      privacyLink: "https://example.com/datenschutz",   // Datenschutzrichtlinie
-      termsLink: "https://example.com/nutzungsbedingungen", // Nutzungsbedingungen
       images: [
-        "assets/screens/shot1.jpg",
-        "assets/screens/shot2.jpg",
-        "assets/screens/shot3.jpg"
+        "/Main/assets/screens/shot1.jpg",
+        "/Main/assets/screens/shot2.jpg",
+        "/Main/assets/screens/shot3.jpg"
       ]
     };
-
-    const links = [
-      ["btn-itch", CONFIG.itchLink],
-      ["btn-privacy", CONFIG.privacyLink],
-      ["btn-terms", CONFIG.termsLink],
-      ["cta-itch", CONFIG.itchLink],
-      ["cta-privacy", CONFIG.privacyLink],
-      ["cta-terms", CONFIG.termsLink],
-    ];
-    links.forEach(([id, href])=>{ const a=document.getElementById(id); if(a&&href){ a.href=href; }});
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -153,16 +139,3 @@
       figure.addEventListener('click', ()=> openLightbox(src, alt));
       gallery.appendChild(figure);
     });
-
-    const dlg = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lb-img');
-    const lbCap = document.getElementById('lb-caption');
-    const lbClose = document.getElementById('lb-close');
-
-    function openLightbox(src, alt){ lbImg.src = src; lbImg.alt = alt; lbCap.textContent = alt; dlg.showModal(); }
-    lbClose.addEventListener('click', ()=> dlg.close());
-    dlg.addEventListener('click', (e)=>{ const r = dlg.getBoundingClientRect(); if(!(e.clientX>r.left&&e.clientX<r.right&&e.clientY>r.top&&e.clientY<r.bottom)) dlg.close(); });
-    window.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && dlg.open) dlg.close(); });
-  </script>
-</body>
-</html>
